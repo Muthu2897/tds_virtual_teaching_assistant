@@ -1,4 +1,7 @@
-beautifulsoup4
-markdownify
-playwright
-requests
+fastapi
+uvicorn
+python-dotenv
+google-genai
+pydantic
+numpy
+imghdr
