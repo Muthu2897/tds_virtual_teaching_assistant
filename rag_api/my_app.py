@@ -121,8 +121,8 @@ async def ask(request: QARequest):
     context = "\n---\n".join(chunk["content"] for chunk in chunks) if chunks else ""
 
     # --- Build prompt for Gemini ---
-    prompt = f"""Answer the question using the following context and image description.
-Be concise and accurate. Use the image information if it helps answer the question.
+    prompt = f"""You are an expert assistant.Answer the question using the following context and image description.
+Be concise and accurate. Use the image information if it helps to answer the question.
 
 Context:
 {context}
