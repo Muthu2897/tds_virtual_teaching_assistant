@@ -50,4 +50,4 @@ cd virtual-teaching-assistant
 
 The .env file has to be setup with the key and API end point
 
-
+Run command : python -m uvicorn rag_api.my_app:app --reload --host 0.0.0.0 --port 5045

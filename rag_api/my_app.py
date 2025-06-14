@@ -11,6 +11,7 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 import google.genai as genai
 import google.genai.types as types
+from typing import Optional
 
 # --- Load environment ---
 load_dotenv()
@@ -22,7 +23,7 @@ if not GEMINI_API_KEY:
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 # --- Load unified NPZ vectorstore ---
-data = np.load("database.npz", allow_pickle=True)
+data = np.load("rag_api/database.npz", allow_pickle=True)
 embeddings = data["embeddings"]
 metadata = data["metadata"]
 
@@ -38,7 +39,7 @@ app.add_middleware(
 
 class QARequest(BaseModel):
     question: str
-    image: str | None = None
+    image: Optional[str] = None
 
 # --- Embedding with Gemini ---
 def get_embedding(text, model="models/text-embedding-004"):
