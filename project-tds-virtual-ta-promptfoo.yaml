@@ -24,7 +24,7 @@ defaultTest:
         method: POST
         headers:
           Content-Type: application/json
-          Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIyZHMxMDAwMTAzQGRzLnN0dWR5LmlpdG0uYWMuaW4ifQ.djMqhVHtXAMSt_Ww3ufQgWCQQ8LNksYciBp8w5dFpJ0  # Replace with your token
+          Authorization: Bearer   # Replace with your token
         body: |
           {
             "model": "gpt-4o-mini",
