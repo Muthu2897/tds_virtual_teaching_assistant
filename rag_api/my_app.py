@@ -64,7 +64,7 @@ def search_chunks(question, top_k=3):
     return [metadata[i] for i in top_indices]
 
 # --- Collect helpful links ---
-def collect_links(chunks, max_links=4):
+def collect_links(chunks, max_links=5):
     links = []
     seen = set()
     for chunk in chunks:
