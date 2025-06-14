@@ -48,6 +48,6 @@ An AI-powered assistant designed to help teachers and learners interact with edu
 git clone https://github.com/your-username/virtual-teaching-assistant.git
 cd virtual-teaching-assistant
 
-
+The .env file has to be setup with the key and API end point
 
 
